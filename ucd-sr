@@ -1,0 +1,38 @@
+@startuml
+|up| unit pengusul
+|s| sekretariat
+|r| rektor
+|ut| unit tujuan
+
+|up|
+start
+:ajukan surat;
+
+|s|
+:approve surat;
+
+|r|
+:disposisi;
+
+
+|ut|
+if (rektor minta tanggapan ?) is (ya) then
+    |ut|
+    :memberi tanggapan;
+
+    |r|
+    :disposisi;
+
+else (tidak)
+    |ut|
+    :surat keluar;
+endif
+
+|ut|
+: surat keluar;
+
+|up|
+: disposisi;
+stop
+
+@enduml
